@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
 
 \begin{document}
     \section{Digital Signature}
@@ -147,6 +149,36 @@
                 \item % to-do
                 \item % to-do
             \end{itemize}
+        \end{enumerate}
+        \item
+        \begin{enumerate}
+            \item
+            $(\textrm{\# of columns} - 1)\times(\textrm{\# of rows} - 1) = 2\times 3 = 6$
+            \item
+            See Table \ref{tab:richness}. The expected value is $25$.
+            \begin{table}[h]
+                \centering
+                \resizebox{\textwidth}{!}{%
+                \begin{tabular}{@{}l|lll|l@{}}
+                \toprule
+                                     & Marginally Rich  & Comfortably Rich & Super Rich       & TOTAL \\ \midrule
+                No college           & 25               & 25               & 25               & 75    \\
+                Some college         & 10               & 10               & 10               & 30    \\
+                Undergraduate degree & 51.3333333333333 & 51.3333333333333 & 51.3333333333333 & 154   \\
+                Postgraduate study   & 13.6666666666667 & 13.6666666666667 & 13.6666666666667 & 41    \\ \midrule
+                TOTAL                & 100              & 100              & 100              & 300   \\ \bottomrule
+                \end{tabular}%
+                }
+                \caption{Each cell is calculated by multiplying column and row totals and dividing it by the total.}
+                \label{tab:richness}
+            \end{table}
+            \item
+            I disagree.
+            The \textit{expected values} matter, rather than the observed ones.
+            In Table \ref{tab:richness}, all expected values are above $5$, so the $\chi^2$-test will be valid.
+            \item
+            According to the $\chi^2$-table, with 6 degrees of freedom, $\chi^2 = 14.45$ corresponds to a p-value of $0.025$.
+            This p-value is low enough (less than the level $0.05$) to assert the claim.
         \end{enumerate}
     \end{enumerate}
 \end{document}
