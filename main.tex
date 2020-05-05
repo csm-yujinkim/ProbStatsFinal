@@ -50,14 +50,14 @@
         \begin{enumerate}
             \item
             Let $X$ be the number of defectives.
-            Then, $X \sim \mathrm{Bin}(100, 0.05)$.
+            Then, $X \sim \mathrm{Bin}(100, 0.03)$.
             \[
-                P(X = 5) = {100 \choose 5} \times (0.05)^5 \times (1-0.05)^{100 - 5} = 0.18
+                P(X = 5) = {100 \choose 5} \times (0.03)^5 \times (1-0.03)^{100 - 5} = 0.10
             \]
             \item
-            $X \sim \mathrm{Bin}(500, 0.05)$.
-            So, $\mu_X = 500\times 0.05 = 25$.
-            25 defects are expected to be seen.
+            $X \sim \mathrm{Bin}(500, 0.03)$.
+            So, $\mu_X = 500\times 0.03 = 15$.
+            15 defects are expected to be seen.
         \end{enumerate}
         \item
         \begin{enumerate}
@@ -73,8 +73,10 @@
                 &= 0.54
             \end{align*}
             \item
+            False.
             $P(A\mid B) \ne P(A)$, so $A$ and $B$ are not independent.
             \item
+            False.
             $P(A\cap B) > 0$, so they are not mutually exclusive.
         \end{enumerate}
         \item
@@ -129,7 +131,7 @@
             \item F % *mutually exclusive*
             \item F % Not if true variance is known
             \item F % \mu is a parameter so probability doesn't apply
-            \item F % positive correlation does not decide which sign of the slope it is
+            \item T
         \end{enumerate}
         \item
         \begin{enumerate}
@@ -188,7 +190,7 @@
             In Table \ref{tab:richness}, all expected values are above $5$, so the $\chi^2$-test will be valid.
             \item
             According to the $\chi^2$-table, with 6 degrees of freedom, $\chi^2 = 14.45$ corresponds to a p-value of $0.025$.
-            This p-value is low enough (less than the level $0.05$) to assert the claim.
+            This p-value is low enough (less than the level $0.05$) to reject independence.
         \end{enumerate}
         \item
         \begin{enumerate}
