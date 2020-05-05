@@ -100,5 +100,15 @@
         $|z|$ increases if the standard error decreases.
         The standard error decreases if the number of samples increases.
         So, \textbf{p-value decreases} as the number of samples increases.
+        \item
+        \begin{align*}
+            p &= 0.25 \\
+            \hat{p} &= 138/500 = 0.276\textrm{ (exact)} \\
+            n &= 500 \\
+            s &= \sqrt{\frac{p(1-p)}{n}} \approx 0.01936492 \\
+            z &= \frac{\hat{p} - p}{s} \approx 1.342634
+        \end{align*}
+        According to R, the p-value is approximately $0.09$.
+        Since the p-value is too high, it cannot be concluded that the proportion of smokers is higher than 25\%.
     \end{enumerate}
 \end{document}
